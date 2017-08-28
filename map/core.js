@@ -1,6 +1,6 @@
 function multiplyBy10 (array) {
-  return array.map(function(element) {
-    return element * 10;
+  return array.map(function(number) {
+    return number * 10;
   })
 };
 
@@ -15,11 +15,18 @@ function shiftRight (array) {
 }
 
 function onlyVowels (array) {
- // your code here
+  return array.map(function(word) {
+    return word.replace(/[^aeiou]/gi,"");
+  })
 };
 
 function doubleMatrix (array) {
- // your code here
+
+  return array.map(function(innerArray) {
+    return innerArray.map(function(number) {
+      return number * 2;
+    })
+  })
 };
 
 module.exports = {
@@ -28,9 +35,3 @@ module.exports = {
   onlyVowels: onlyVowels,
   doubleMatrix: doubleMatrix
 };
-
-let numbers = [1, 5, 10, 15];
-
-let doubles = numbers.map(function(x) {
-  return x*2;
-});
