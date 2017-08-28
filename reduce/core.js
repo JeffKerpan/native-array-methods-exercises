@@ -3,15 +3,24 @@ function sum (array) {
 };
 
 function productAll (array) {
-  // your code here
-};
+  return array.reduce(function (outerAcc, outerValue) {
+    return outerValue.reduce(function (innerAcc, innerVal) {
+      return innerAcc * innerVal;
+    }, 1) * outerAcc;
+  }, 1);
+}
 
 function objectify (array) {
-  // your code here
-};
+  return arra.reduce(function (acc, currentVal) {
+    acc[currentVal[0]] = currentVal[1];
+    return acc;
+  }, {});
+}
 
 function luckyNumbers (array) {
-  // your code here
+  return array.reduce(function(acc, value, index, arr) {
+    return (index ===)
+  })
 };
 
 module.exports = {
