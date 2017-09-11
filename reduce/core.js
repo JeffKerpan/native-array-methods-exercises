@@ -1,5 +1,8 @@
 function sum (array) {
   // your code here
+  return array.reduce((previous, current) => {
+    return previous + current;
+  });
 };
 
 function productAll (array) {
@@ -11,17 +14,25 @@ function productAll (array) {
 }
 
 function objectify (array) {
-  return array.reduce(function (acc, currentVal) {
-    acc[currentVal[0]] = currentVal[1];
-    return acc;
+  return array.reduce(function (accumulator, currentVal) {
+    accumulator[currentVal[0]] = currentVal[1];
+    return accumulator;
   }, {});
 }
 
+// function objectify (array) {
+//   return array.reduce((a, b) => (a[b[0]] = b[1]) && a, {});
+// }
+
 function luckyNumbers (array) {
-  return array.reduce(function(acc, value, index, arr) {
-    return (index ===)
-  })
-};
+  return array.reduce((a, b, i) => i === array.length - 1 ? `${a} and ${b}` : `${a} ${b}, `, 'Your lucky numbers are:');
+}
+
+// function luckyNumbers (array) {
+//   return array.reduce(function(acc, value, index, arr) {
+//     return (index ===)
+//   })
+// };
 
 module.exports = {
   sum: sum,
