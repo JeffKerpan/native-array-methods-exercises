@@ -11,7 +11,7 @@ function productAll (array) {
 }
 
 function objectify (array) {
-  return arra.reduce(function (acc, currentVal) {
+  return array.reduce(function (acc, currentVal) {
     acc[currentVal[0]] = currentVal[1];
     return acc;
   }, {});
